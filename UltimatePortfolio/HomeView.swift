@@ -12,6 +12,7 @@ struct HomeView: View {
     
     var body: some View {
         VStack{
+            // Create new data in memory when selected
             Button("Add Data") {
                 dataController.deleteAll()
                 try? dataController.createSampleData()
