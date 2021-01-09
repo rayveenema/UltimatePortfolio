@@ -20,6 +20,7 @@ struct ProjectsView: View {
     }
 
     var body: some View {
+        // Pretty cool view
         NavigationView {
             List {
                 ForEach(projects.wrappedValue) { project in
