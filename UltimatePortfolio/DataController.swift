@@ -12,7 +12,7 @@ class DataController: ObservableObject {
     // TODO Change to store locally for macOs
     let container: NSPersistentCloudKitContainer
 
-    init(inMemory: Bool = true) {
+    init(inMemory: Bool = false) {
         container = NSPersistentCloudKitContainer(name: "Main")
 
         // Great for testing
@@ -28,7 +28,7 @@ class DataController: ObservableObject {
     }
 
     static var preview: DataController = {
-        let dataController = DataController(inMemory: true)
+        let dataController = DataController(inMemory: false)
 
         do {
             try dataController.createSampleData()
